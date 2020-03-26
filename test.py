@@ -33,12 +33,24 @@
 
 # print(total/len(nums))
 
-user_input = ("Enter a guess:")
+# user_input = ("Enter a guess:")
 
-list = [a, b, c, d, e]
+# list = [a, b, c, d, e]
 
-blanks = [_, _, _, _, _]
+# blanks = [_, _, _, _, _]
 
-for x in blanks:
-	if user_input in list:
-	print(index(list))
+# for x in blanks:
+# 	if user_input in list:
+# 	print(index(list))
+
+for fizzbuzz in range(100):
+    if fizzbuzz % 3 == 0 and fizzbuzz % 5 == 0:
+        print("fizzbuzz")
+        continue
+    elif fizzbuzz % 3 == 0:
+        print("fizz")
+        continue
+    elif fizzbuzz % 5 == 0:
+        print("buzz")
+        continue
+    print(fizzbuzz)

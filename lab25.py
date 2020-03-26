@@ -1,6 +1,4 @@
 
-
-
 class Account: 
     def __init__(self): 
         self.balance=0
@@ -29,7 +27,7 @@ class Account:
         print("Net Available Balance=",self.balance)
         print(self.history)
 
- a = Account()
+a = Account()
 
 while True: 
 
