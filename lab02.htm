@@ -7,12 +7,38 @@
   box-sizing: border-box;
 }
 
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
 /* Add a gray background color with some padding */
   
   body {
   font-family: Georgia;
   padding: 20px;
   background: #f1f1f1;
+  min-width: 500px;
+  display: inline-block;
 }
 
 /* Header/Blog Title */
@@ -40,6 +66,8 @@
 .leftcolumn {
   float: left;
   width: 50%;
+  padding-right: 20px;
+  padding-left: 140px;
 }
 
 .card {
@@ -51,7 +79,7 @@
 /* Right column */
 .rightcolumn {
   float: right;
-  width: 50%;
+  width: 40%;
   padding-left: 20px;
 }
 
@@ -95,13 +123,19 @@ img.rounded-corners {
     <h1>Eric Matthews:Life and Times</h1>
 </header></center>
 <!-- Navbar (sit on top) -->
-<nav>
+<center><nav>
         <a href="file:///Users/pizzaboynizza/PycharmProjects/bootcamp/class_whatever/code/Justin/lab02.htm#">Home</a> |
         <a href="https://www.fanpop.com/clubs/eric-matthews">Fan Club</a> |
         <a href="https://en.wikipedia.org/wiki/Boy_Meets_World">Wikipedia</a> |
         <a href="https://www.imdb.com/title/tt0105958/characters/nm0295115">IMDb</a>
-      </nav>
+      </nav></center>
 <section>
+<div class="sidenav">
+  <a href=#about me>About Me</a>
+  <a href=#popular posts>Popular Posts</a>
+  <a href=#follow me>Follow Me</a>
+</div>
+
     <div class="leftcolumn">
         <div class="card">
         <h2>I'm baby biodiesel</h2>
@@ -134,7 +168,7 @@ img.rounded-corners {
     </section>
 <div class="rightcolumn">
     <h2>About Me</h2>
-        ><div id= "#about" class="fakeimg" style="height:100px;"><img src="/Users/pizzaboynizza/PycharmProjects/bootcamp/class_whatever/code/Justin/images (9).jpeg" class=rounded-corners </div>
+        <div id= "#about" class="fakeimg" style="height:100px;"><img src="/Users/pizzaboynizza/PycharmProjects/bootcamp/class_whatever/code/Justin/images (9).jpeg" class=rounded-corners </div>
         <p>I'm baby sed portland dolore enim four dollar toast messenger 
             bag tofu semiotics irony bicycle rights in ex plaid. 
             Fingerstache master cleanse knausgaard blue bottle. 
@@ -196,8 +230,6 @@ img.rounded-corners {
     </section>
     
     <div class="wrapper">
-
-            footer
       
           <div class="push"></div>
         </div>
