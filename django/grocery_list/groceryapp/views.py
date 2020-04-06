@@ -17,8 +17,6 @@ def detail(request, grocery_list_id):
     context = {'grocery_list': grocery_list, 'grocery_items': grocery_items, 'coupons':coupons}
     return render(request, 'groceryapp/detail.html', context)
 
-
-
 def additem(request, grocery_list_id):
     grocery_list = GroceryList.objects.get(pk=grocery_list_id)
     grocery_item_id = request.POST['grocery_item_id']
@@ -35,8 +33,6 @@ def additem(request, grocery_list_id):
 
     return HttpResponseRedirect(reverse('groceryapp:detail', kwargs={'grocery_list_id':grocery_list_id}))
 
-
-
 def applycoupon(request, grocery_list_id):
     grocery_list = GroceryList.objects.get(pk=grocery_list_id)
     coupon_id = request.POST['coupon_id']
@@ -48,12 +44,10 @@ def applycoupon(request, grocery_list_id):
 
     return HttpResponseRedirect(reverse('groceryapp:detail', kwargs={'grocery_list_id':grocery_list_id}))
 
+def handler404(request, exception):
+    return HttpResponseRedirect('/Users/pizzaboynizza/PycharmProjects/bootcamp/class_whatever/code/Justin/django/grocery_list/groceryapp/x2018-06-03-1.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.nPx2PFToZU.png')
 
 
-
-def handler404(request):
-    return HttpResponseRedirect('https://http.cat/404')
-
-
-def handler500(request):
-    return HttpResponseRedirect('https://http.cat/500')
+def handler500(request
+):
+    return HttpResponseRedirect('/Users/pizzaboynizza/PycharmProjects/bootcamp/class_whatever/code/Justin/django/grocery_list/groceryapp/15158abc53a3532b8ebef6f6c818b67c.jpg')
