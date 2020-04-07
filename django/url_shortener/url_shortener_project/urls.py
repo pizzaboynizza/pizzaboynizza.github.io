@@ -1,6 +1,7 @@
-"""groceryproj URL Configuration
+
+"""url_shortener_project URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.0/topics/http/urls/
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -17,8 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('groceryapp.urls'))
+    path('url_shortener/', include('url_shortener.urls'))
 ]
-
-handler404 = 'groceryapp.views.handler404'
-handler500 = 'groceryapp.views.handler500'
