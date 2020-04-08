@@ -11,7 +11,7 @@ def index(request):
     return render(request, 'grocery_list/index.html', {'grocery_list': grocery_list})
 
 def create(request):
-    grocery_item_text = request.POST['text']
+    grocery_item_text = request.POST['item']
     GroceryItem.objects.create(item_text = grocery_item_text, created_date = timezone.now())
     return HttpResponseRedirect(reverse('index'))
 

@@ -11,7 +11,7 @@ def index(request):
     return render(request, 'url_shortener/index.html')
 
 def add(request):
-    url_code_url = request.POST['url']
+    url_code_url = request.POST['link']
     while True:  
         url_code_code = ''
         for i in range(6):
@@ -36,4 +36,4 @@ def show(request, url_code_code):
 def results(request, url_code_code):
     url_code = URL_Code.objects.get(code__exact = url_code_code)
     url_code_code = url_code.code
-    return render(request, 'url_shortener/results.html', {'url_code': url_code, 'url_code_code': url_code_code}) 
+    return render(request, 'url_shortener/stats.html', {'url_code': url_code, 'url_code_code': url_code_code}) 
