@@ -1,17 +1,5 @@
 data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9,]
 
-def peaks(data):
-
-    for i in range(1, len(data)-1):
-        if data[i - 1] < data[i] > data[i + 1]:
-            print(i)
-
-def valleys(data):
-
-    for i in range(1, len(data)-1):
-        if data[i - 1] > data[i] < data[i + 1]:
-            print(i)
-
 def peaks_and_valleys(data):
 
     for i in range(1, len(data)-1):
@@ -21,7 +9,7 @@ def peaks_and_valleys(data):
         elif data[i - 1] > data[i] < data[i + 1]:
             print(i)
 
-valleys(data)
+peaks_and_valleys(data)
 #
 
 
