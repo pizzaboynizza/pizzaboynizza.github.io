@@ -41,12 +41,12 @@ class Account:
         self.history.append(amount)
   
     def withdraw(self): 
-        amount = float(input("Withdrawal amount: ")) 
+        amount = float(input("Withdrawal: ")) 
         if self.balance>=amount: 
             self.balance-=amount
-            self.history.append("Withdrawal amount:")
+            self.history.append("Withdrawal:")
             self.history.append(amount)
-            print("Withdrawal amount", amount)
+            print("Withdrawal", amount)
         else: 
             output_two = print("\n Insufficient balance")
             self.history.append(amount)
@@ -67,7 +67,7 @@ class Account:
 # #print total amount
 # print ('Balance: '),account_balance
 
- printMenu()
+# printMenu()
 
 # command=str(getTransaction())
 
