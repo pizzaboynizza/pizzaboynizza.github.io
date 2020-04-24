@@ -4,26 +4,37 @@ let timer;
 let stopwatchElement = document.querySelector('.stopwatch');
 let cyclesContainer = document.querySelector('.cycles')
 
-function Begin() {
-   if(!timer) {
-    timer = setInterval(run, 10);
+function getTimer() {
+    return (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + (ms < 10 ? "0" + ms : ms);
 }
 
-function un() {
+function stopTimer() {
+    clearInterval(timer);
+    timer = false;
+}
+
+function begin() {
+    if(!timer) {
+    timer = setInterval(run, 10);
+    }
+    
+}
+
+function run() {
     stopwatchElement.textContent = getTimer();
     ms++;
     if(ms == 100) {
         ms = 0;
         s++;
     }
-    if(s == 100) {
+    if(s == 60) {
         s = 0;
         m++;
     }
 
 }
 
-function Halt() {
+function halt() {
    stopTimer();
 
 function cease() {
@@ -33,21 +44,12 @@ function cease() {
     stopwatchElement.textContent = getTimer
 }
 
-function stopTimer() {
-    clearInterval(timer);
-    timer = false;
+function renew() {
+    cease();
+    begin();
 }
 
-function getTimer() {
-    return (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + (ms < 10 ? "0" + ms : ms);
-}
-
-function Renew() {
-    Cease();
-    Begin();
-}
-
-function Cycle() {
+function cycle() {
     if(timer) {
         let li = document.createElement("li");
         li.innerText = getTimer();
@@ -58,4 +60,6 @@ function Cycle() {
 
 function resetCycles() {
     cyclesContainer.innerHTML = '';
+    }
+
 }
