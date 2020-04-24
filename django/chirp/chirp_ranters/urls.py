@@ -3,6 +3,6 @@ from . import views
 
 app_name = 'chirp_ranters' 
 urlpatterns = [
-    path('beg', views.beg, name='beg'),
+    path('beseech', views.beseech, name='beseech'),
     path('user/<str:trollavatar>/', views.details, name='details'),
 ]
